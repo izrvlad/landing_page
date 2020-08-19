@@ -1,0 +1,55 @@
+.ideas{
+  background-color: $white;
+  padding: 30px 50px 67px;
+  box-sizing: border-box;
+  .ideas__icon{
+    width: 132px;
+    height: 132px;
+    background-color: $red;
+    position: relative;
+    margin: 50px auto;
+    clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+    img, svg{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50% );
+      height: 40px;
+      width: 30px;
+      fill: $white;
+    }
+  }
+  .ideas__title{
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 1.35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    &::after{
+      display: block;
+      content: "";
+      width:41px;
+      height:1px;
+      background-color:#888888;
+      border-bottom: 1px solid #e1e1e1;
+      margin:30px auto;
+    }
+  }
+  p{
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1.05px;
+    color: $advantages-gray;
+  }
+  a{
+    @include btn(){
+      display: block;
+      width: 145px;
+      font-size: 12px;
+      line-height:16px ;
+      letter-spacing:0.12px;
+      padding: 13px 0;
+      margin: 50px auto;
+    }
+  }
+}

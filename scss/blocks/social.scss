@@ -1,0 +1,15 @@
+.social{
+  display: flex;
+  justify-content: space-between;
+  li{
+    margin-right: 20px;
+  }
+  .social__icon{
+    width: 20px;
+    height: 25px;
+    fill: $advantages-gray;
+    &:hover{
+      fill: $red;
+    }
+  }
+}

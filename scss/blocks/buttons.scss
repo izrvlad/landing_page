@@ -1,0 +1,20 @@
+.bottons{
+    text-align: center;
+  a{
+    @include btn($two-btn:true);
+
+
+  }
+}
+@media(max-width: 660px){
+  .bottons{
+    a{
+      display: block;
+      margin: 10px auto;
+      &:first-child{
+        margin: 15px auto;
+      }
+    }
+
+  }
+}

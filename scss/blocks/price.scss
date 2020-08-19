@@ -1,0 +1,136 @@
+.price{
+  margin: 120px auto;
+  p{
+    font-size: 14px;
+    line-height: 29px;
+    color:$advantages-gray;
+    text-align: center;
+  }
+  .price__title{
+    font-size: 36px;
+    letter-spacing: 3.6px;
+    line-height: 36px;
+    font-weight: 700;
+    color: $gray;
+    margin-bottom: 20px;
+  }
+  .price__devider{
+    @include devider($advantages-gray)
+  }
+  .price__block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+  .price__element{
+    flex-basis: 32%;
+    text-align: center;
+    background-color: $white-gray;
+
+    .price__top{
+      background-color: $gray;
+      padding-top: 50px;
+      padding-bottom: 139px;
+      p{
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing:2px;
+        color: $white;
+        font-weight: 600;
+      }
+
+    }
+    .price__mounth{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 154px;
+      height: 154px;
+      background-color: $white;
+      border-radius: 50%;
+      border: 14px solid rgba(244,245,249,0.75);
+      margin: -84px auto 0;
+      p{
+        text-align: center;
+        font-size: 40px;
+        line-height: 22px;
+        font-weight: 700;
+        span{
+          margin-top: 13px;
+          display: block;
+          font-size: 13px;
+          font-weight: 400;
+        }
+      }
+    }
+    .price__bottom{
+      ul{
+        margin: 37px 0;
+        li{
+          margin: 13px 0;
+          font-size: 14px;
+          line-height: 40px;
+          color: $advantages-gray;
+          font-weight: 500;
+        }
+      }
+      a{
+        @include btn($advantages-gray){
+          width: 145px;
+          padding: 14px 0;
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+  .price--red{
+    .price__top{
+      background-color: $red;
+    }
+    .price__bottom{
+      .price__mounth{
+        p{
+          color: $red;
+          span{
+            color: $advantages-gray;
+          }
+        }
+      }
+      a{
+        @include btn(){
+          width: 145px;
+          padding: 14px 0;
+          margin-bottom: 50px;
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .price{
+    margin: 50px;
+    .price__block{
+      justify-content: center;
+    }
+    .price__element{
+      flex-basis:48%;
+      margin-bottom: 20px;
+      &:first-child{
+        margin-right: 20px;
+      }
+    }
+  }
+}
+@media(max-width: 768px){
+  .price{
+    .price__element{
+      flex-basis: 100%;
+      &:first-child{
+        margin-right: 0;
+      }
+    }
+  }
+}

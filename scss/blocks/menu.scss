@@ -1,0 +1,44 @@
+.menu{
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li{
+      margin: 15px;
+      a{
+        font-size: 14px;
+        font-weight: 600;
+        color: $white-gray;
+        text-decoration: none;
+        padding-bottom: 22px;
+        border-bottom: 2px solid transparent;
+        transition-duration: 300ms;
+        transition-property: color, border-bottom-color;
+
+        &:hover{
+          color:#9b443f;
+          border-color: #9b443f;
+        }
+
+      }
+    }
+  }
+}
+@media (max-width: 640px) {
+  .menu {
+    ul {
+      justify-content: center;
+      li {
+        margin: 8px;
+        a{
+          padding-bottom: 0;
+          border-bottom: none;
+          &:hover{
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
